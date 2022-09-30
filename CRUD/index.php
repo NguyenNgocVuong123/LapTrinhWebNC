@@ -31,6 +31,7 @@
                 <div class="col-md-12">
                     <div class="page-header clearfix">
                         <h2 class="pull-left">Employees Details</h2>
+                        <a href="getid.php" class="btn btn-success pull-middle">xem id</a>
                         <a href="create.php" class="btn btn-success pull-right">Add New Employee</a>
                     </div>
                     <?php

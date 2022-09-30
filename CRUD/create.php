@@ -53,8 +53,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Cố gắng thực thi câu lệnh đã chuẩn bị
             if(mysqli_stmt_execute($stmt)){
                 // Tạo bản ghi thành công. Chuyển hướng đến trang đích
-                header("location: index.php");
-                exit();
+                // header("location: index.php");
+                // exit();
+                $last_id = mysqli_insert_id($link);
+    echo "Chèn bản ghi thành công. ID đã chèn cuối cùng là: " . $last_id;
             } else{
                 echo "Oh, no. Có gì đó sai sai. Vui lòng thử lại.";
             }
@@ -87,6 +89,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
+                    
                     <div class="page-header">
                         <h2>Create Record</h2>
                     </div>
