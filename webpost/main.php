@@ -20,7 +20,6 @@ include_once('seo_friendly.php');
             $allcount_fetch = mysqli_fetch_array($allcount_result);
             $allcount = $allcount_fetch['allcount'];
 
-            // select first 3 posts
             $query = "select * from posts order by id asc limit 0,$rowperpage ";
             $result = mysqli_query($conn,$query);
 
@@ -33,21 +32,20 @@ include_once('seo_friendly.php');
                 $link = $row['url'];
                 $imgw= $row['image'];
             ?>
-                <!-- Post -->
                 <div class="post" id="post_<?php echo $id; ?>">
                     <?php echo "<img src='./admin/photo/$row[image]' width='200px' height='200px'/>";?>
                     <h1><?php echo $title; ?></h1>
                     <p>
                         <?php echo $shortcontent; ?>
                     </p>
-                    <a href="<?php echo $link; ?>" class="more" target="_blank">More</a>
+                    <a href="<?php echo $link; ?>" class="more" target="_blank">Chi tiết</a>
                 </div>
 
             <?php
             }
             ?>
 
-            <h1 class="load-more" style="color:red">Load More</h1>
+            <h1 class="load-more" style="color:red">Xem thêm</h1>
             <input type="hidden" id="row" value="0">
             <input type="hidden" id="all" value="<?php echo $allcount; ?>">
             
