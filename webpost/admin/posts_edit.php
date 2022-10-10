@@ -19,7 +19,7 @@ $row=mysqli_fetch_assoc($query);
 <label>Nội dung:<br/>
 <textarea value="" name="content" id="content" rows="10" cols="80"/><?php echo $row['content']; ?></textarea></label><br/>
 <label>Hình ảnh: <br/>
-<input type="text" value="<?php echo $row['image']; ?>" name="image"/></label><br/>
+<input type="file" value="<?php echo $row['image']; ?>" name="image"/></label><br/>
 <input type="submit" value="Update" name="update_posts">
 <?php require_once 'posts_update.php';?>
 </form>

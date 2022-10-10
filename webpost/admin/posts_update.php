@@ -6,7 +6,7 @@ $url=$_POST['url'];
 $content=$_POST['content'];
 $image=$_POST['image'];
  
-$sql = "UPDATE `posts` SET title='$title', '$url', content='$content', image='$image' WHERE id='$id'";
+$sql = "UPDATE `posts` SET title='$title', url='$url', content='$content', image='$image' WHERE id='$id'";
  
 if ($conn->query($sql) === TRUE) {
 echo "<b>Record updated successfully</b>";
